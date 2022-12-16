@@ -24,11 +24,12 @@ class CustomCard2 extends StatelessWidget {
             fit: BoxFit.cover,
             fadeInDuration: const Duration(milliseconds: 300),
           ),
-          Container(
-              alignment: AlignmentDirectional.centerEnd,
-              padding: const EdgeInsets.only(
-                  right: 20, top: 10, bottom: 20, left: 20),
-              child: Text(name ?? 'Un Hermoso Paisaje'))
+          if (name != null)
+            Container(
+                alignment: AlignmentDirectional.centerEnd,
+                padding: const EdgeInsets.only(
+                    right: 20, top: 10, bottom: 20, left: 20),
+                child: Text(name!))
         ],
       ),
     );
